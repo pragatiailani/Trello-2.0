@@ -1,7 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    reactStrictMode: false,
     images: {
-        domains: ["upload.wikimedia.org"],
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "upload.wikimedia.org",
+                port: "",
+                pathname: "/wikipedia/en/thumb/8/8c/**",
+            },
+        ],
     },
 };
 
